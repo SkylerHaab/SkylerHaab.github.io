@@ -71,10 +71,10 @@ let offsetY = 0;
 // Platform, cannon, projectile, and collectable variables
 let platforms = [];
 let cannons = [];
-const cannonWidth = 80;
-const cannonHeight = 80;
+const cannonWidth = 75;
+const cannonHeight = 75;
 let projectiles = [];
-const defaultProjectileWidth = 24;
+const defaultProjectileWidth = 0;
 const defaultProjectileHeight = defaultProjectileWidth;
 const collectableWidth = 50;
 const collectableHeight = 50;
