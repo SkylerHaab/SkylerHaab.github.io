@@ -50,12 +50,16 @@ $(function () {
     createPlatform(500, 600, 100, 20);
     createPlatform(800, 450, 100, 20);
     createPlatform(1260, 450, 200, 20);
-    createPlatform(100, 0, 20, 500);
+    createPlatform(100, 0, 20, 330);
     createPlatform(100, 200, 100, 20);
     createPlatform(300, 430, 100, 20);
     createPlatform(1260, 300, 200, 20);
     createPlatform(850, 200, 100, 20);
     createPlatform(100, 320, 100, 20);
+    createPlatform(500, 675, 75, 75);
+    createPlatform(200, 675, 75, 75);
+    createPlatform(800, 675, 75, 75);
+    createPlatform(1200, 675, 75, 75);
 
     // TODO 2
     // Create collectables
