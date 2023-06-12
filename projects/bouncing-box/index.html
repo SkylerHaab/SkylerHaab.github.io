@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Bouncing Box</title>
+	<title>Skyler's Bouncing Box Game</title>
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
@@ -48,8 +48,8 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
-				box.css("left", newPositionX);
+			function moveBoxTo(100) {
+				box.css("left", 100);
 			}
 
 			// changes the text displayed on the Box
@@ -71,8 +71,8 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+				moveBoxTo(100);
+				moveBoxTo(boardWidth);
 			};
 
 			/* 
