@@ -60,7 +60,7 @@ main {
 #interests {
     border: 6px rgb(0, 0, 0) ridge;
     padding: 15px;
-    margin: 20px;
+    margin: 0px;
 }
 h2, h3 {
     margin: 0px;
