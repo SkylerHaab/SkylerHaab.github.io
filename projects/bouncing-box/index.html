@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(102, 19, 122);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -19,6 +19,7 @@
 		}
 		.board{
 			height: 100vh;
+			background-image: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80);
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -48,8 +49,8 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(100) {
-				box.css("left", 100);
+			function moveBoxTo(newPositionX) {
+				box.css("left", newPositionX);
 			}
 
 			// changes the text displayed on the Box
@@ -62,7 +63,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var positionX = 0;
+			var positionX = 0
+			var points = 0
+			var speed = 10
 
 			
 			/* 
@@ -71,8 +74,14 @@
 			turn it around! 
 			*/
 			function update() {
-				moveBoxTo(positionX);
-				moveBoxTo(boardWidth);
+				positionX = positionX + speed
+				moveBoxTo(positionX) 
+				if (positionX > boardWidth) {
+					speed = -speed;
+				}
+				if (positionX < 0) {
+					speed = -speed;
+				}
 			};
 
 			/* 
@@ -81,9 +90,15 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
+				positionX = 0;
+				points = points + 1
+				if (speed > 0) {
+					speed = speed + 3
+				}
+				else if (speed < 0) {
+					speed = speed -3
+				}
+				changeBoxText(points);
 			};
 		})();
 	</script>
