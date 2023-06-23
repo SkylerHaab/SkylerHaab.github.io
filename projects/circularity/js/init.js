@@ -48,22 +48,17 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition([0])
-            physikz.updatePosition([1])
-            physikz.updatePosition([2])
-            physikz.updatePosition([3])
-            physikz.updatePosition([4])
+            // code here was deleted since todo 9 does it's needed action
 
-            
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition([0])
-            game.checkCirclePosition([1])
-            game.checkCirclePosition([2])
-            game.checkCirclePosition([3])
-            game.checkCirclePosition([4])
+            // code here was deleted since todo 9 does it's needed action
 
             // TODO 9 : Iterate over the array  
-        }   
+           for (var i = 0; i < circles.length; i++) {
+            physikz.updatePosition(circles[i]);
+            game.checkCirclePosition(circles[i]);
+           }
+        }
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -73,16 +68,16 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
+            if (circle.x > canvas.width) {
                 circle.x = 0;
             }
-            else if (circle.x < 0) {
+            if (circle.x < 0) {
                 circle.x = canvas.width;
               }
-            if (circle.y < 0) {
+            if (circle.y < 0){
                 circle.y = canvas.height;
             }
-            else if (circle.y > canvas.height) {
+            if (circle.y > canvas.height) {
                 circle.y = 0;
               }
               var rightEdge = circle.x + circle.radius;
