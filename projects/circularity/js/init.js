@@ -32,9 +32,10 @@ var init = function (window) {
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-        for (var i = 0; i < 50; i++) {
+        for (var i = 0; i < 100; i++) {
             drawCircle();
         }
+        
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -61,9 +62,8 @@ var init = function (window) {
             game.checkCirclePosition([3])
             game.checkCirclePosition([4])
 
-            // TODO 9 : Iterate over the array
-            
-        }
+            // TODO 9 : Iterate over the array  
+        }   
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -76,7 +76,16 @@ var init = function (window) {
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-            
+            else if (circle.x < 0) {
+                circle.x = canvas.width;
+              }
+            if (circle.y < 0) {
+                circle.y = canvas.height;
+            }
+            else if (circle.y > canvas.height) {
+                circle.y = 0;
+              }
+              var rightEdge = circle.x + circle.radius;
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
 
